@@ -1,1 +1,1 @@
-console.log("Hello Duniya");
+console.log("It is external script");

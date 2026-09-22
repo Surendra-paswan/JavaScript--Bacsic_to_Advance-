@@ -56,22 +56,22 @@
 
 // we can discuss one object  in one or more object include
 
-const user1 = {
-  name: "Surendra",
-  age: 21,
-  city: "Lumbini",
-  address: {
-    country: "Nepal",
-    state: "Lumbini",
-    postalCode: 32900,
-    moreDetails: {
-      landmark: "Lumbini Garden",
-      nearbyPlaces: {
-        place1: "Maya Devi Temple",
-        place2: "Lumbini Museum",
-      },
-    },
-  },
-};
+// const user1 = {
+//   name: "Surendra",
+//   age: 21,
+//   city: "Lumbini",
+//   address: {
+//     country: "Nepal",
+//     state: "Lumbini",
+//     postalCode: 32900,
+//     moreDetails: {
+//       landmark: "Lumbini Garden",
+//       nearbyPlaces: {
+//         place1: "Maya Devi Temple",
+//         place2: "Lumbini Museum",
+//       },
+//     },
+//   },
+// };
 
-user1.address.state = "Rupandeh"; // Updating the state property of the address object
+// user1.address.state = "Rupandeh"; // Updating the state property of the address object

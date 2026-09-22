@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 Modules</title>
+    <script src="script.js" type="module" ></script>
+  </head>
+  <body style="font-family: cursive">
+    <h1>ES6 Modules</h1>
+    <div>
+    <h2>ES6 Modules: Import and Export</h2>
+
+    <p>
+        <strong>Import</strong> and <strong>Export</strong> are two important
+        features of ES6 Modules. They allow us to split our code into
+        smaller, reusable pieces, making it easier to manage and maintain.
+    </p>
+
+    <p>
+        In this example, we have two files:
+        <strong>usersData.js</strong> and <strong>productData.js</strong>.
+        We are exporting data from these files and importing them into
+        <strong>script.js</strong>. This way, we can use the data in our
+        main script without having to include all the code in one file.
+        // 'use strict'; // ysko satta ma use garne ho type="module" atomatic enambe strict it work same.
+    </p>
+
+
+    <h3>Types of Exports</h3>
+
+    <p>
+        There are <strong>two types of exports</strong>:
+    </p>
+
+
+    <h4>1. Named Exports</h4>
+
+    <p>
+        We can have <strong>multiple named exports</strong> in a file.
+        We can import them using their names in another file.
+    </p>
+
+    <p>
+        For example, we can export
+        <strong>usersData</strong> and <strong>myName</strong>
+        from <strong>usersData.js</strong> and import them in
+        <strong>script.js</strong> using their names.
+    </p>
+
+    <p><strong>Export syntax:</strong></p>
+
+    <pre>
+export { usersData, myName };
+    </pre>
+
+    <p><strong>Import syntax:</strong></p>
+
+    <pre>
+import { usersData, myName } from './usersData.js';
+    </pre>
+
+    <p>
+        Named exports use <strong>curly brackets { }</strong>
+        while importing.
+    </p>
+
+
+    <h4>2. Default Exports</h4>
+
+    <p>
+        We can have <strong>only one default export</strong> in a file.
+        We can import it using <strong>any name</strong> in another file.
+    </p>
+
+    <p>
+        For example, we can export <strong>productsData</strong>
+        from <strong>productData.js</strong> and import it in
+        <strong>script.js</strong> using any name.
+    </p>
+
+    <p><strong>Export syntax:</strong></p>
+
+    <pre>
+export default productsData;
+    </pre>
+
+    <p><strong>Import syntax:</strong></p>
+
+    <pre>
+import productsData from './productData.js';
+    </pre>
+
+    <p>
+        Default exports <strong>do not use curly brackets { }</strong>
+        while importing.
+    </p>
+
+ <h3> Quick Summary</h3>
+
+    <ul>
+        <li>
+            <strong>Named Export:</strong> Multiple exports are allowed.
+        </li>
+
+        <li>
+            <strong>Default Export:</strong> Only one default export is allowed.
+        </li>
+
+        <li>
+            <strong>Named Import:</strong> Uses <strong>{ }</strong>.
+        </li>
+
+        <li>
+            <strong>Default Import:</strong> Does not use <strong>{ }</strong>.
+        </li>
+
+        <li>
+            Named exports normally use the same name when importing,
+            while default exports can be imported with any name.
+        </li>
+    </ul>
+</div>
+    <pre>
+ // import {usersData, myName as myNames} from "./usersData.js";
+// import usersDatas, {usersData, myName, getFirstUser } from "./usersData.js";
+// import usersDatas from "./usersData.js"; 
+
+// import * as something from "./usersData.js";  // it is importing all the named exports from the usersData.js file and assigning them to an object called something. we can access the named exports using dot notation. For example, we can access the usersData using something.usersData, myName using something.myName, and getFirstUser using something.getFirstUser.
+
+// import productsData from "./productData.js"; // we can import the default export without using the curly braces. we can also change the name of the default export while importing it in another file. For example, we can import productsData as myProductsData in another file.
+
+// const myName = 'sunil'; when we change the name of the variable when we have already the same name variable in the imported file, then it will give an error because we cannot have two variables with the same name in the same scope.
+
+
+// console.log(usersData);
+// console.log(myName);
+// console.log(usersDatas);
+
+// console.log(myNames);
+// we can change the name of the variable when importing it.
+
+
+// console.log(productsData);
+// console.log(myProductData);
+
+// console.log(something);
+// console.log(something.usersData);
+// console.log(something.myName);
+// // console.log(something.getFirstUser());
+// console.log(something.default());
+
+// Next step how to work it 
+
+// import productsData from "./productData.js";
+</pre>
+
+<p>Note: we can define variable without using (var, let , const), this data will go in window object (it means global scope) 
+    <br>
+    <p>for exmaple: 
+        user = 'surendra'
+    </p>
+</p>
+  </body>
+</html>
